@@ -2,12 +2,12 @@
 -- PostgreSQL database dump
 --
 
-\restrict vnPkaZwiBStaUQkfUsD28XbErecOxt1uXpAi980vLEZUIf6OqDh5XR0fSgzWA4Q
+\restrict 9Q6XS7OJzjBMsZ9l1eQkNomW0teKHNavfN7Xy1OpS3PnYZe3JXqIJowi9fxE8zv
 
 -- Dumped from database version 18.0
 -- Dumped by pg_dump version 18.0
 
--- Started on 2026-03-08 13:59:48
+-- Started on 2026-03-08 14:24:06
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -43,7 +43,7 @@ CREATE TABLE public.connection (
 ALTER TABLE public.connection OWNER TO postgres;
 
 --
--- TOC entry 4956 (class 0 OID 0)
+-- TOC entry 4964 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN connection.stop_a; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -52,7 +52,7 @@ COMMENT ON COLUMN public.connection.stop_a IS 'kulcs';
 
 
 --
--- TOC entry 4957 (class 0 OID 0)
+-- TOC entry 4965 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN connection.stop_b; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -61,7 +61,7 @@ COMMENT ON COLUMN public.connection.stop_b IS 'kulcs';
 
 
 --
--- TOC entry 4958 (class 0 OID 0)
+-- TOC entry 4966 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN connection.duration; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -70,7 +70,7 @@ COMMENT ON COLUMN public.connection.duration IS 'A és B megállók közötti ut
 
 
 --
--- TOC entry 4959 (class 0 OID 0)
+-- TOC entry 4967 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN connection.route_id; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -79,7 +79,7 @@ COMMENT ON COLUMN public.connection.route_id IS 'kulcs';
 
 
 --
--- TOC entry 4960 (class 0 OID 0)
+-- TOC entry 4968 (class 0 OID 0)
 -- Dependencies: 221
 -- Name: COLUMN connection."order"; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -144,7 +144,7 @@ CREATE TABLE public.stop (
 ALTER TABLE public.stop OWNER TO postgres;
 
 --
--- TOC entry 4961 (class 0 OID 0)
+-- TOC entry 4969 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: TABLE stop; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -153,7 +153,7 @@ COMMENT ON TABLE public.stop IS 'Egyetlen megálló';
 
 
 --
--- TOC entry 4962 (class 0 OID 0)
+-- TOC entry 4970 (class 0 OID 0)
 -- Dependencies: 219
 -- Name: COLUMN stop.id; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -235,7 +235,7 @@ CREATE TABLE public.trip_segment (
 ALTER TABLE public.trip_segment OWNER TO postgres;
 
 --
--- TOC entry 4963 (class 0 OID 0)
+-- TOC entry 4971 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: COLUMN trip_segment.schedule_id; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -244,7 +244,7 @@ COMMENT ON COLUMN public.trip_segment.schedule_id IS 'Ebből tudjuk, hogy pl a 4
 
 
 --
--- TOC entry 4964 (class 0 OID 0)
+-- TOC entry 4972 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: COLUMN trip_segment.on_stop; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -253,7 +253,7 @@ COMMENT ON COLUMN public.trip_segment.on_stop IS 'melyik megállónál szállt f
 
 
 --
--- TOC entry 4965 (class 0 OID 0)
+-- TOC entry 4973 (class 0 OID 0)
 -- Dependencies: 230
 -- Name: COLUMN trip_segment.off_stop; Type: COMMENT; Schema: public; Owner: postgres
 --
@@ -292,7 +292,7 @@ ALTER TABLE public.trip ALTER COLUMN trip_id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- TOC entry 4941 (class 0 OID 25466)
+-- TOC entry 4949 (class 0 OID 25466)
 -- Dependencies: 221
 -- Data for Name: connection; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -302,7 +302,7 @@ COPY public.connection (connection_id, stop_a, stop_b, duration, route_id, "orde
 
 
 --
--- TOC entry 4940 (class 0 OID 25460)
+-- TOC entry 4948 (class 0 OID 25460)
 -- Dependencies: 220
 -- Data for Name: route; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -312,7 +312,7 @@ COPY public.route (route_id, route_name) FROM stdin;
 
 
 --
--- TOC entry 4939 (class 0 OID 25453)
+-- TOC entry 4947 (class 0 OID 25453)
 -- Dependencies: 219
 -- Data for Name: stop; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -322,7 +322,7 @@ COPY public.stop (id, name) FROM stdin;
 
 
 --
--- TOC entry 4945 (class 0 OID 25479)
+-- TOC entry 4953 (class 0 OID 25479)
 -- Dependencies: 225
 -- Data for Name: timetable; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -332,7 +332,7 @@ COPY public.timetable (route_id, start_time, id) FROM stdin;
 
 
 --
--- TOC entry 4948 (class 0 OID 25493)
+-- TOC entry 4956 (class 0 OID 25493)
 -- Dependencies: 228
 -- Data for Name: trip; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -342,7 +342,7 @@ COPY public.trip (trip_id, total_duration) FROM stdin;
 
 
 --
--- TOC entry 4950 (class 0 OID 25501)
+-- TOC entry 4958 (class 0 OID 25501)
 -- Dependencies: 230
 -- Data for Name: trip_segment; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -352,7 +352,7 @@ COPY public.trip_segment (id, trip_id, schedule_id, on_stop, off_stop) FROM stdi
 
 
 --
--- TOC entry 4966 (class 0 OID 0)
+-- TOC entry 4974 (class 0 OID 0)
 -- Dependencies: 222
 -- Name: connection_connection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -361,7 +361,7 @@ SELECT pg_catalog.setval('public.connection_connection_id_seq', 1, false);
 
 
 --
--- TOC entry 4967 (class 0 OID 0)
+-- TOC entry 4975 (class 0 OID 0)
 -- Dependencies: 223
 -- Name: route_route_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -370,7 +370,7 @@ SELECT pg_catalog.setval('public.route_route_id_seq', 1, false);
 
 
 --
--- TOC entry 4968 (class 0 OID 0)
+-- TOC entry 4976 (class 0 OID 0)
 -- Dependencies: 224
 -- Name: stop_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -379,7 +379,7 @@ SELECT pg_catalog.setval('public.stop_id_seq', 1, false);
 
 
 --
--- TOC entry 4969 (class 0 OID 0)
+-- TOC entry 4977 (class 0 OID 0)
 -- Dependencies: 226
 -- Name: timetable_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -388,7 +388,7 @@ SELECT pg_catalog.setval('public.timetable_id_seq', 1, false);
 
 
 --
--- TOC entry 4970 (class 0 OID 0)
+-- TOC entry 4978 (class 0 OID 0)
 -- Dependencies: 229
 -- Name: trip_segment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -397,7 +397,7 @@ SELECT pg_catalog.setval('public.trip_segment_id_seq', 1, false);
 
 
 --
--- TOC entry 4971 (class 0 OID 0)
+-- TOC entry 4979 (class 0 OID 0)
 -- Dependencies: 227
 -- Name: trip_trip_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
@@ -459,11 +459,83 @@ ALTER TABLE ONLY public.trip_segment
     ADD CONSTRAINT trip_segment_pkey PRIMARY KEY (id);
 
 
--- Completed on 2026-03-08 13:59:48
+--
+-- TOC entry 4796 (class 2606 OID 25564)
+-- Name: trip_segment off; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.trip_segment
+    ADD CONSTRAINT off FOREIGN KEY (off_stop) REFERENCES public.stop(id) NOT VALID;
+
+
+--
+-- TOC entry 4797 (class 2606 OID 25559)
+-- Name: trip_segment on; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.trip_segment
+    ADD CONSTRAINT "on" FOREIGN KEY (on_stop) REFERENCES public.stop(id) NOT VALID;
+
+
+--
+-- TOC entry 4792 (class 2606 OID 25539)
+-- Name: connection route_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connection
+    ADD CONSTRAINT route_id FOREIGN KEY (route_id) REFERENCES public.route(route_id) NOT VALID;
+
+
+--
+-- TOC entry 4795 (class 2606 OID 25544)
+-- Name: timetable route_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.timetable
+    ADD CONSTRAINT route_id FOREIGN KEY (route_id) REFERENCES public.route(route_id) NOT VALID;
+
+
+--
+-- TOC entry 4793 (class 2606 OID 25529)
+-- Name: connection stop_a; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connection
+    ADD CONSTRAINT stop_a FOREIGN KEY (stop_a) REFERENCES public.stop(id) NOT VALID;
+
+
+--
+-- TOC entry 4794 (class 2606 OID 25534)
+-- Name: connection stop_b; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.connection
+    ADD CONSTRAINT stop_b FOREIGN KEY (stop_b) REFERENCES public.stop(id) NOT VALID;
+
+
+--
+-- TOC entry 4798 (class 2606 OID 25554)
+-- Name: trip_segment timetable; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.trip_segment
+    ADD CONSTRAINT timetable FOREIGN KEY (schedule_id) REFERENCES public.timetable(id) NOT VALID;
+
+
+--
+-- TOC entry 4799 (class 2606 OID 25549)
+-- Name: trip_segment trip_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.trip_segment
+    ADD CONSTRAINT trip_id FOREIGN KEY (trip_id) REFERENCES public.trip(trip_id) NOT VALID;
+
+
+-- Completed on 2026-03-08 14:24:06
 
 --
 -- PostgreSQL database dump complete
 --
 
-\unrestrict vnPkaZwiBStaUQkfUsD28XbErecOxt1uXpAi980vLEZUIf6OqDh5XR0fSgzWA4Q
+\unrestrict 9Q6XS7OJzjBMsZ9l1eQkNomW0teKHNavfN7Xy1OpS3PnYZe3JXqIJowi9fxE8zv
 
